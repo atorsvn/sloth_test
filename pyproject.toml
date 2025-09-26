@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gemma-agent"
+version = "0.1.0"
+description = "Automation utilities for fine-tuning Gemma 3 270M with Unsloth and exporting GGUF weights."
+readme = "README.md"
+authors = [{name = "Automation Agent"}]
+requires-python = ">=3.10"
+dependencies = [
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+]
+
+[project.scripts]
+gemma-agent = "gemma_agent.cli:main"
